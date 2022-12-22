@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:进入登录页面;
+:登录、注册业务;
+:登录成功;
+:进入个人信息界面;
+:修改个人信息;
+split
+:修改姓名;
+split again
+:修改电话;
+if (检查是否符合标准?) then (yes)
+:修改手机号;
+else  (no)
+:弹窗提醒输入手机号不正确;
+endif
+split again
+:修改地址;
+split again
+:修改头像;
+if (检查头像是否小于1Mb?) then (yes)
+:修改头像;
+else  (no)
+:弹窗提醒头像大小应小于1Mb;
+endif
+end split
+:修改个人信息结束;
+
+stop
+
+@enduml

@@ -1,0 +1,37 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+left to right direction
+
+rectangle 骑手子模块{
+
+usecase 注册
+usecase 修改个人信息
+
+(修改个人信息)...>(修改姓名):include
+(修改个人信息)...>(修改电话):include
+(修改个人信息)...>(修改头像):include
+(修改个人信息)...>(修改地址):include
+
+usecase 登录
+
+usecase 查看未完成送货订单
+
+(查看未完成送货订单) ..> (查看订单详情):include
+(查看未完成送货订单) ..> (查看商家地址):include
+(查看未完成送货订单) ..> (查看客户地址):include
+(查看客户地址) ..> (确认送达):include
+(查看商家地址)..>(确认取餐):include
+usecase 确认送达
+
+usecase 查询已完成送单记录
+
+(查询已完成送单记录)..> (查看订单详情):include
+(注册) ..> (修改个人信息):extends
+}
+骑手 -- (查看未完成送货订单)
+骑手 -- (注册)
+骑手 -- (修改个人信息)
+骑手 -- (查询已完成送单记录)
+骑手 -- (登录)
+
+@enduml

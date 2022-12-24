@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+title 商家申请新店铺
+
+actor 商家
+participant FrontEnd
+participant BackEnd
+database 数据库
+
+商家 -> FrontEnd ++:申请新店铺
+商家 -> FrontEnd :填写新店铺信息
+商家 -> FrontEnd :提交申请
+FrontEnd -> BackEnd ++:发送新店铺信息
+BackEnd -> BackEnd :向管理员发送申请信息
+alt 审核通过
+BackEnd -> 数据库 ++:存入新店铺信息
+数据库 --> BackEnd --:返回
+BackEnd --> FrontEnd : 上架新店铺
+FrontEnd --> 商家 : 显示新店铺页面
+else 审核未通过
+BackEnd --> FrontEnd --: 申请未通过
+FrontEnd --> 商家 --:告知商家申请未通过
+end
+
+
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+title 查看店铺食品销售额列表
+
+actor 商家
+participant FrontEnd
+participant BackEnd
+database 数据库
+
+商家 -> FrontEnd ++:选择店铺，进入店铺页面
+商家 -> FrontEnd :查看店铺营业信息
+商家 -> FrontEnd :查看店铺食品销售额列表
+FrontEnd -> BackEnd ++: 获取店铺食品销售额列表
+BackEnd -> 数据库 ++:查询店铺食品销售额信息
+数据库 --> BackEnd -- :返回店铺食品销售额信息
+BackEnd --> FrontEnd -- :返回店铺食品销售额列表
+FrontEnd --> 商家 --:显示店铺食品销售额列表
+@enduml

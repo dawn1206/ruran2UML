@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:进入商家首页;
+:显示店铺列表;
+:选择店铺;
+:进入店铺页面;
+:查看店铺营业情况;
+split
+:查看总营业额;
+split again
+:查看历史营业额;
+split again
+:查看当月营业额;
+split again
+:查看食品销售额列表;
+split end
+
+stop
+
+@enduml

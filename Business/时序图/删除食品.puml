@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+title 商家删除店铺食品
+
+actor 商家
+participant FrontEnd
+participant BackEnd
+database 数据库
+
+商家 -> FrontEnd ++:选择店铺，进入店铺页面
+商家 -> FrontEnd :进入食品管理页面
+商家 -> FrontEnd :删除食品
+商家 -> FrontEnd :选择要删除的食品
+FrontEnd -> BackEnd ++:发送被删除食品的信息
+BackEnd -> 数据库 ++:将被选中食品删除
+数据库 --> BackEnd --: 返回
+BackEnd --> FrontEnd --: 删除食品成功
+@enduml

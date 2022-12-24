@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+title 商家查看店铺详细信息
+
+actor 商家
+participant FrontEnd
+participant BackEnd
+database 数据库
+
+商家 -> FrontEnd ++:选择店铺，进入店铺页面
+商家 -> FrontEnd : 商家查看店铺详细信息
+FrontEnd -> BackEnd ++: 查询店铺详细信息
+BackEnd -> 数据库 ++: 查询店铺详细信息
+数据库 --> BackEnd --: 返回店铺详细信息
+BackEnd --> FrontEnd --: 返回店铺详细信息
+FrontEnd --> 商家 --:显示店铺详细信息
+
+
+@enduml

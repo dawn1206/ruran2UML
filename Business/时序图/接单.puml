@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+title 商家处理用户订单
+
+actor 商家
+participant FrontEnd
+participant BackEnd
+database 数据库
+
+商家 -> FrontEnd ++:选择店铺，进入店铺页面
+商家 -> FrontEnd :进入用户订单处理页面
+loop
+商家 -> FrontEnd : 接收用户订单
+FrontEnd -> BackEnd ++:发送商家接单消息
+BackEnd -> BackEnd :通知用户商家已接单
+BackEnd -> 数据库 ++: 更新数据库信息
+数据库 --> BackEnd : 返回
+BackEnd --> FrontEnd :返回
+FrontEnd --> 商家 :显示接单成功
+商家 -> FrontEnd : 发布订单派送通知
+FrontEnd -> BackEnd :发布订单派送通知
+BackEnd -> 数据库 :新增未分配派送订单记录
+数据库 --> BackEnd :返回
+BackEnd --> FrontEnd :返回
+FrontEnd --> 商家 :显示等待骑手接单
+商家 -> FrontEnd :订单交付给骑手
+FrontEnd -> BackEnd :更新订单状态信息
+BackEnd -> BackEnd :通知用户订单正在派送中
+BackEnd -> 数据库 :更新数据库信息
+数据库 --> BackEnd --:返回
+BackEnd --> FrontEnd --:返回
+
+end
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:进入商家首页;
+        :显示店铺列表;
+        :选择店铺;
+        :进入店铺页面;
+repeat:接收用户订单;
+:开始出餐;
+:发布订单派送通知;
+:等待骑手接单;
+:交付外卖;
+backward:去处理下一个订单;
+repeat while(仍有订单？)
+stop
+
+@enduml

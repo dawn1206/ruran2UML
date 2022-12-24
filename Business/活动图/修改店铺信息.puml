@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:进入商家首页;
+:显示店铺列表;
+:选择店铺;
+:进入店铺页面;
+:点击修改店铺信息;
+:输入修改信息;
+:提交修改信息;
+:修改店铺信息成功;
+stop
+
+@enduml

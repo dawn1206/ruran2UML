@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/state-diagram
+
+scale 350 width
+
+state 创建订单 {
+  [*] --> 设置订单时间
+ 设置订单时间 --> 生成QueryWrapper
+  生成QueryWrapper --> 查询相关购物车信息
+  查询相关购物车信息-->异步线程: 调用
+  查询相关购物车信息->获得生成的orderId
+  获得生成的orderId->orderId返回前端
+}
+
+state 异步线程 {
+  生成订单具体条目-->更新数据库
+}
+@enduml

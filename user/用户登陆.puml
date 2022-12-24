@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+title 用户登陆
+activate FrontEnd
+activate UserController
+FrontEnd->UserController:getUserByIdByPass
+activate UserService
+activate UserMapper
+UserController-\UserService:async_getUserByIdByPass
+UserService->UserMapper:selectById
+UserMapper-->UserService:user
+UserService->UserService:check pass and user exists
+UserService-->UserController:user
+UserController-->FrontEnd:user
+deactivate FrontEnd
+|||
+@enduml

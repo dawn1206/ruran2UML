@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+title 商家页面展示
+autonumber
+activate FrontEnd
+activate BusinessController
+
+activate BusinessService
+
+
+FrontEnd->BusinessController: listBusinessByOrderTypeId
+BusinessController-\BusinessService:listBusinessByOrderTypeId
+
+
+activate QueryWrapper
+BusinessService->QueryWrapper:实例化QueryWrapper，设置("orderTypeId",orderTypeId)映射
+|||
+activate BusinessMapper
+QueryWrapper->BusinessService :queryWrapper
+|||
+BusinessService->BusinessMapper:selectList(queryWrapper)
+deactivate QueryWrapper
+|||
+BusinessMapper-->BusinessService:List<Business>
+
+BusinessService-->BusinessController:List<Business>
+BusinessController-->FrontEnd:List<Business>
+FrontEnd->BusinessController:getBusinessById
+BusinessController-\BusinessService:getBusinessById
+
+activate QueryWrapper
+BusinessService->QueryWrapper:实例化QueryWrapper，设置("businessId",businessId)映射
+|||
+QueryWrapper-->BusinessService:queryWrapper
+|||
+BusinessService->BusinessMapper:selectList(queryWrapper)
+deactivate QueryWrapper
+|||
+BusinessMapper-->BusinessService:business
+BusinessService-->BusinessController:business
+BusinessController-->FrontEnd:business
+@enduml

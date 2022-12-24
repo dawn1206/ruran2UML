@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+title 用户注册
+
+activate FrontEnd
+activate UserController
+activate UserService
+activate UserMapper
+
+FrontEnd -> UserController: getUserById
+UserController -\ UserService:getUserById
+UserService->UserMapper:selectById
+UserMapper-->UserService:state to describe outcome
+UserService-->UserController:state to describe registered or not
+UserController-->FrontEnd:state to describe registered or not
+|||
+|||
+|||
+
+deactivate FrontEnd
+@enduml

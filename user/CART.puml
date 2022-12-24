@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/state-diagram
+
+scale 750 width
+
+state FrontEnd {
+state listCart
+state updateCart
+state removeCart
+state saveCart
+}
+
+state Controller {
+state listCart
+state saveCart
+state updateCart
+
+saveCart-->CartController_saveCart
+CartController_saveCart-->saveCart
+removeCart-->CartController_removeCart
+CartController_removeCart-->removeCart
+updateCart-->CartController_updateCart
+CartController_updateCart->updateCart
+listCart-->CartController_listCart
+CartController_listCart-->listCart
+}
+
+state Service{
+CartController_saveCart-->CartService_saveCart
+CartService_saveCart-->CartController_saveCart
+CartController_listCart-->CartService_listCart
+CartService_listCart-->CartController_listCart
+CartController_removeCart-->CartService_removeCart
+CartService_removeCart-->CartController_removeCart
+CartController_updateCart-->CartService_updateCart
+CartService_updateCart-->CartController_updateCart
+
+CartService_saveCart-->CartMapper
+CartService_removeCart-->CartMapper
+CartService_listCart-->CartMapper
+CartService_updateCart-->CartMapper
+}
+@enduml

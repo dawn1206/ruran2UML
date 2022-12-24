@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/state-diagram
+
+scale 700 width
+title 用户注册流程
+state 用户注册界面 {
+  [*] -> UserController : getUserById
+  state 提示用户名已存在
+  state getUserByIdByPass
+  state 登陆成功
+  state 登陆失败
+}
+
+state Server {
+  state UserController{
+  }
+
+  UserController --> UserService : getUserById
+  UserController-->UserService : getUserByIdByPass
+  UserService --> UserMapper : selectById(userId)
+  state duplicateorNot <<fork>>
+  state checkPassword <<fork>>
+  UserMapper-->duplicateorNot :用户是否为空
+  UserMapper-->checkPassword: 密码检验
+  checkPassword-->incorrect :正确
+  checkPassword-->correct :错误
+  correct-->登陆成功
+  incorrect-->登陆失败
+  duplicateorNot --> duplicateUser : 用户非空
+  duplicateorNot --> noDuplicateUser : 用户为空
+  duplicateUser-->提示用户名已存在
+  noDuplicateUser-->getUserByIdByPass
+  getUserByIdByPass-->UserController
+
+}
+@enduml

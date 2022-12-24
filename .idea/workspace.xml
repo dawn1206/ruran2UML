@@ -2,15 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28f96acd-7fdb-4b5e-92a2-2c586c8ad51c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/onlyforUML.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/骑手业务设计.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/骑手功能性需求分析.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/骑手注册S.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/CART.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/写者锁.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/商家页面展示.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/异步操作.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/用户注册.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/用户注册状态机.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/用户登陆.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/缓存.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/读者锁.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stateMachinePerson.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/个人信息修改A.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/取餐送达功能S.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/骑手业务设计.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/骑手功能性需求分析.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/骑手查单取餐送达A.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/骑手注册S.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/骑手登录S.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/骑手类图.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/骑手订单查询.puml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,5 +100,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="clear" />
+    <option name="LAST_COMMIT_MESSAGE" value="clear" />
   </component>
 </project>

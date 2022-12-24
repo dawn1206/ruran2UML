@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:查询操作;
+:读者锁加锁;
+if (缓存中是否存在) then (存在)
+  :返回缓存中对应键的值;
+  stop
+
+else (不存在)
+endif
+:查询数据库;
+:将对应键值对加入缓存;
+:返回查询值;
+:读者锁解锁;
+stop
+
+@enduml

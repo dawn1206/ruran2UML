@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+while (存在未审核的店铺申请)
+  :管理员检查该店铺申请;
+  if(通过管理员审核) then(true)
+    :修改审核状态为已通过;
+    :将该店铺放上系统展示部分;
+  else(false)
+    :修改审核状态为未通过;
+    :填写店铺申请的未通过理由;
+  endif
+endwhile (不存在未审核的店铺申请)
+
+stop
+
+@enduml

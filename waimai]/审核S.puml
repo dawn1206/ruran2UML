@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+title 外卖平台对店铺申请进行审核
+
+actor 管理员
+activate 管理员
+participant FrontEnd order 2
+participant BackEnd order 3
+activate BackEnd
+database 数据库 order 6
+
+activate 数据库
+|||
+管理员 -> FrontEnd:查看未审核的店铺申请
+activate FrontEnd
+FrontEnd->BackEnd:查询所有未审核的店铺申请
+BackEnd->数据库:查询所有审核状态为未审核的店铺申请
+数据库 -> BackEnd:返回查询结果
+BackEnd->FrontEnd:返回店铺申请订单列表
+FrontEnd ->管理员:显示所有未审核的店铺申请
+管理员 ->FrontEnd:平台对于某一条店铺申请进行审核
+alt 该店铺申请通过
+管理员 ->FrontEnd:该店铺申请通过
+FrontEnd->BackEnd:该店铺申请通过
+BackEnd->BackEnd:将该店铺上架到商家展示部分
+BackEnd->数据库:插入新店铺信息，修改店铺申请状态
+数据库->BackEnd:返回业务执行结果
+BackEnd->FrontEnd:返回业务执行结果
+FrontEnd->管理员:显示事务处理结果
+else 该店铺申请未通过
+管理员 ->FrontEnd:该店铺申请未通过，填写未通过原因
+FrontEnd->BackEnd:该店铺申请未通过(店铺申请id，原因:string)
+BackEnd->数据库:修改店铺申请状态，增加申请未通过原因
+数据库->BackEnd:返回业务执行结果
+BackEnd->FrontEnd:返回业务执行结果
+FrontEnd->管理员:显示事务处理结果
+end
+
+deactivate FrontEnd
+|||
+@enduml

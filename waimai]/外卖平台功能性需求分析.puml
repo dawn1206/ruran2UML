@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+left to right direction
+
+rectangle 外卖平台模块{
+
+usecase 分配订单
+usecase 创建送货订单
+
+(分配订单) ..> (创建送货订单):include
+usecase 查询订单
+usecase 使用订单id查询订单
+usecase 查询所有送货订单
+
+usecase 查看未完成送货订单
+usecase 查询已完成送单记录
+usecase 查询所有未分配订单
+(查询订单)..>(使用订单id查询订单):include
+(查询订单)..>(查询所有未分配订单):include
+(查询订单)..>(查询所有送货订单):include
+
+(查询所有送货订单)..>(查看未完成送货订单):include
+(查询所有送货订单)..>(查询已完成送单记录):include
+(查看未完成送货订单) ..> (查看订单详情):include
+(查询已完成送单记录)..> (查看订单详情):include
+
+usecase 查看店铺申请
+usecase 审核店铺申请
+usecase 将店铺上架展示界面
+usecase 通过或驳回店铺申请
+(查看店铺申请) ..>(审核店铺申请):include
+(审核店铺申请)..>(通过或驳回店铺申请):include
+}
+
+外卖平台管理员 -- (查询订单)
+外卖平台管理员 -- (分配订单)
+外卖平台管理员 -- (查看店铺申请)
+外卖平台管理员 -- (将店铺上架展示界面)
+
+@enduml

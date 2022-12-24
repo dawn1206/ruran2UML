@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+title 外卖平台订单分配
+
+actor 管理员
+activate 管理员
+participant FrontEnd order 2
+participant BackEnd order 3
+activate BackEnd
+database 数据库 order 6
+
+activate 数据库
+|||
+管理员 -> FrontEnd:查看未分配订单
+activate FrontEnd
+FrontEnd->BackEnd:查询未分配订单
+BackEnd->数据库:查询所有分配状态为未分配的订单
+数据库 -> BackEnd:返回查询结果
+BackEnd->FrontEnd:返回未分配订单列表
+FrontEnd ->管理员:显示所有未分配订单
+管理员 ->FrontEnd:平台对于某一条未分配订单进行分配
+FrontEnd->BackEnd:要求进行订单分配(订单id:string)
+BackEnd->BackEnd:计算得到最合适的分配骑手
+BackEnd->BackEnd:使用订单和最适合的骑手创建送货订单
+BackEnd->数据库:修改订单状态为已分配，插入送货订单
+数据库->BackEnd:返回业务处理结果和送货单信息
+BackEnd->FrontEnd:返回业务处理结果和送货单
+FrontEnd->管理员:显示事务处理成功并显示送货单详细情况
+deactivate FrontEnd
+|||
+@enduml

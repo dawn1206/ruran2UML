@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+while (存在未分配骑手的订单)
+  :根据商家和用户的位置计算选择合适的骑手;
+  :修改订单分配状态未已分配;
+  :根据订单创建送单;
+  :更新骑手未完成订单列表;
+endwhile (不存在未分配骑手的订单)
+
+stop
+
+@enduml

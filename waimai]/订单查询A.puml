@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:管理员进入查询订单界面;
+split
+    :管理员输入订单号;
+    if (是否存在该订单) then (true)
+        :系统展示订单详情;
+    else (false)
+        :系统提示订单不存在;
+    endif
+split again
+:管理员选择查看所有送货订单;
+:系统展示所有送货订单项;
+  split
+  split again
+    :管理员点击具体订单条目;
+    :系统展示订单详情;
+  split again
+    :管理员点击未完成送货订单;
+    :系统展示所有未完成送货订单项;
+    :管理员点击具体订单条目;
+    :系统展示订单详情;
+  split again
+    :管理员点击已完成送货订单;
+    :系统展示所有已完成送货订单项;
+    :管理员点击具体订单条目;
+    :系统展示订单详情;
+  endsplit
+split again
+:管理员选择查看所有订单;
+:系统展示所有订单项;
+split
+split again
+    :管理员点击未分配订单;
+    :系统展示所有未分配订单项;
+    :管理员点击具体订单条目;
+    :系统展示订单详情;
+endsplit
+endsplit
+stop
+@enduml

@@ -12,8 +12,8 @@ FrontEnd -->骑手Controller:通过http使用restfulAPI方式调用
 
 rectangle BackEnd{
 class 骑手Controller{
-    + 骑手登录(rider:骑手个人信息):登录结果
-    + 骑手注册(rider:骑手个人信息):注册结果
+    + 骑手登录(rider:骑手用户):登录结果
+    + 骑手注册(rider:骑手用户):注册结果
     + 骑手id检查(riderId:string):检查结果
     + 查询已完成订单(riderId:string):List<送货订单>
     + 查询未完成订单(riderId:ID):List<送货订单>
@@ -59,7 +59,7 @@ rectangle PO{
     + 订单创建时间:Date
     }
 
-    class 骑手个人信息{
+    class 骑手用户{
     }
 
         class User{
@@ -69,7 +69,7 @@ rectangle PO{
         + 地址:string
         + 头像:string
         }
-骑手个人信息-|>User:extends
+骑手用户-|>User:extends
 }
 }
 

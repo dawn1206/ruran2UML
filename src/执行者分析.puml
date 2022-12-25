@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+'left to right direction
+
+
+:商家用户: as B
+:骑手用户:as R
+B --|> 用户
+R --|> 用户
+客户 --|>用户
+
+:外卖平台:as A
+@enduml

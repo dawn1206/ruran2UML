@@ -1,0 +1,73 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"28f96acd-7fdb-4b5e-92a2-2c586c8ad51c\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/waimai]/订单分配S.puml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/waimai]/订单查询A.puml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/waimai]/订单查询S.puml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/骑手业务设计.puml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/骑手业务设计.puml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/骑手类图.puml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/骑手类图.puml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"UML Object\" />\r\n        <option value=\"UML State\" />\r\n        <option value=\"UML Class\" />\r\n        <option value=\"UML Activity\" />\r\n        <option value=\"UML Use Case\" />\r\n        <option value=\"UML Sequence\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"user\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2J79tA8aFFcbf4vfl5RytGB1Qcg\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Sequence&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\class_task\\onlyforUML\\src\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"SshConsoleOptionsProvider\">\r\n    <option name=\"myEncoding\" value=\"UTF-8\" />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"28f96acd-7fdb-4b5e-92a2-2c586c8ad51c\" name=\"Changes\" comment=\"\" />\r\n      <created>1671418468041</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1671418468041</updated>\r\n      <workItem from=\"1671418470050\" duration=\"10301000\" />\r\n      <workItem from=\"1671448667079\" duration=\"2448000\" />\r\n      <workItem from=\"1671454266803\" duration=\"1640000\" />\r\n      <workItem from=\"1671456116056\" duration=\"1549000\" />\r\n      <workItem from=\"1671511714898\" duration=\"2940000\" />\r\n      <workItem from=\"1671602559613\" duration=\"10850000\" />\r\n      <workItem from=\"1671671827197\" duration=\"5779000\" />\r\n      <workItem from=\"1671702856676\" duration=\"5451000\" />\r\n      <workItem from=\"1671847955870\" duration=\"403000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1e5fee571970f1e9b3845ee6e1ce0551bd18acb6)
++++ b/.idea/workspace.xml	(date 1671848840365)
+@@ -1,13 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="28f96acd-7fdb-4b5e-92a2-2c586c8ad51c" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/waimai]/订单分配S.puml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/waimai]/订单查询A.puml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/waimai]/订单查询S.puml" afterDir="false" />
++    <list default="true" id="28f96acd-7fdb-4b5e-92a2-2c586c8ad51c" name="Changes" comment="qishou">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/骑手业务设计.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/骑手业务设计.puml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/骑手类图.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/骑手类图.puml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/onlyforUML.iml" beforeDir="false" afterPath="$PROJECT_DIR$/onlyforUML.iml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -78,8 +74,16 @@
+       <workItem from="1671602559613" duration="10850000" />
+       <workItem from="1671671827197" duration="5779000" />
+       <workItem from="1671702856676" duration="5451000" />
+-      <workItem from="1671847955870" duration="403000" />
++      <workItem from="1671847955870" duration="875000" />
++    </task>
++    <task id="LOCAL-00001" summary="qishou">
++      <created>1671848638698</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1671848638698</updated>
+     </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -96,4 +100,8 @@
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="qishou" />
++    <option name="LAST_COMMIT_MESSAGE" value="qishou" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: onlyforUML.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/onlyforUML.iml b/onlyforUML.iml
+--- a/onlyforUML.iml	(revision 1e5fee571970f1e9b3845ee6e1ce0551bd18acb6)
++++ b/onlyforUML.iml	(date 1671848615632)
+@@ -3,7 +3,7 @@
+   <component name="NewModuleRootManager" inherit-compiler-output="true">
+     <exclude-output />
+     <content url="file://$MODULE_DIR$">
+-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/qishou" isTestSource="false" />
+     </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />

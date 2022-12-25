@@ -1,0 +1,67 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class 商家 {
++商家编号:int
++商家名称:string
++商家介绍:string
++联系方式:string
+}
+
+Class 店铺 {
++店铺编号:int
++所属商家编号:int
++店铺名称:string
++店铺地址:string
++店铺介绍:string
++联系方式:string
++店铺分类:string
++起送费:double
++配送费:double
+}
+
+Class 食品 {
++食品编号:int
++食品名称:string
++食品介绍:string
++食品图片:string
++食品价格:double
+}
+
+Class 用户订单 {
++用户订单编号:int
++所属用户编号:int
++所属店铺编号:int
++下单日期:string
++订单总价:double
++送货地址:string
+}
+
+Class 派送订单{
++派送订单编号:string
++派送订单状态:int
++对应用户订单编号:int
++取餐时间:Date
++送达时间:Date
++订单创建时间:Date
+}
+
+Class 订单明细 {
++所属用户订单编号:int
++所属食品编号:int
++食品数量:int
+}
+
+Class 店铺营业情况 {
++所属店铺编号:int
++店铺每月营业额:int
+}
+
+商家 "1" o- "1..*" 店铺
+店铺 "1" -- "1..*" 用户订单
+店铺 "1" -- "1..*" 派送订单
+店铺 "1" o-- "1..*" 食品
+店铺 "1" o- "1" 店铺营业情况
+用户订单 "1" -- "1..*" 订单明细
+@enduml

@@ -1,7 +1,6 @@
 @startuml
 'https://plantuml.com/activity-diagram-beta
 
-|用户|
 start
 :进入总订单界面;
 :显示未完成送单和已完成送单;

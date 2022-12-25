@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28f96acd-7fdb-4b5e-92a2-2c586c8ad51c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/waimai]/订单分配S.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/waimai]/订单查询A.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/waimai]/订单查询S.puml" afterDir="false" />
+    <list default="true" id="28f96acd-7fdb-4b5e-92a2-2c586c8ad51c" name="Changes" comment="宏观用例">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/骑手业务设计.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/骑手业务设计.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/骑手类图.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/骑手类图.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/waimai]/外卖平台功能性需求分析.puml" beforeDir="false" afterPath="$PROJECT_DIR$/waimai]/外卖平台功能性需求分析.puml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="user" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

@@ -1,0 +1,52 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+title 客户点餐
+
+actor 客户
+participant FrontEnd
+participant BackEnd
+database 数据库
+
+客户 -> FrontEnd ++: 选择分类
+FrontEnd -> BackEnd ++:请求分类店铺信息
+BackEnd -> 数据库 ++:查询分类下的店铺信息
+数据库 --> BackEnd :返回分类下的店铺信息
+BackEnd --> FrontEnd :返回分类下的店铺信息
+FrontEnd --> 客户 :显示分类下的店铺信息
+
+客户 -> FrontEnd : 选择店铺
+FrontEnd -> BackEnd :请求店铺食品信息
+BackEnd -> 数据库 :查询店铺食品信息
+数据库 --> BackEnd :返回店铺食品信息
+BackEnd --> FrontEnd :返回店铺食品信息
+FrontEnd --> 客户 :显示店铺食品
+
+loop 订单未生成
+客户 -> FrontEnd :选择食品
+客户 -> FrontEnd :确认结算
+alt 达到起送费
+FrontEnd -> BackEnd :请求确认订单页面
+BackEnd -> 数据库 :查询确认订单页面信息，如配送地址信息
+数据库 --> BackEnd :返回确认订单页面信息
+BackEnd --> FrontEnd : 返回确认订单页面信息
+FrontEnd --> 客户 :跳转并显示确认订单页面
+客户 -> FrontEnd :选择配送地址，确认订单
+FrontEnd -> BackEnd : 生成订单
+BackEnd -> 数据库 :存入新订单信息
+数据库 --> BackEnd :返回新订单信息
+BackEnd --> FrontEnd :返回新订单信息
+FrontEnd --> 客户 : 显示订单信息
+else 没有达到起送费
+FrontEnd --> 客户 :无法跳转页面，提示客户未达到起送费
+end
+end
+
+客户 -> FrontEnd : 选择支付方式
+FrontEnd -> BackEnd :请求支付订单
+BackEnd -> 数据库 :更新订单状态
+数据库 --> BackEnd --:返回订单支付结果
+BackEnd --> FrontEnd --: 返回订单支付结果
+FrontEnd --> 客户 --: 显示订单支付结果
+@enduml

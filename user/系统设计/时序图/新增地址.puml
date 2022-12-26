@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+title 新增配送地址
+
+actor 客户
+participant FrontEnd
+participant BackEnd
+database 数据库
+
+客户 -> FrontEnd ++: 新增配送地址
+FrontEnd -> FrontEnd : 跳转到新增配送地址信息页面
+FrontEnd --> 客户 : 显示新增地址信息填写页面
+客户 -> FrontEnd :填写新增地址信息，点击确认
+FrontEnd -> BackEnd ++: 请求新增客户配送地址
+BackEnd -> 数据库 ++: 将客户新增的配送地址信息存入数据库
+数据库 --> BackEnd --: 返回数据库操作结果
+BackEnd --> FrontEnd --: 返回操作结果
+FrontEnd --> 客户 --:显示新增地址结果
+
+@enduml

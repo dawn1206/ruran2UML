@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+title 用户支付未完成订单
+
+actor 用户
+participant FrontEnd
+participant BackEnd
+database 数据库
+
+用户 -> FrontEnd ++:用户选择支付未完成订单
+FrontEnd -> FrontEnd : 跳转到支付页面
+FrontEnd --> 用户 :显示支付页面
+用户 -> FrontEnd :选择支付方式，确认支付
+FrontEnd -> BackEnd ++:请求支付订单
+BackEnd -> 数据库 ++:改变订单支付状态
+数据库 --> BackEnd --:返回订单支付结果
+BackEnd --> FrontEnd --:返回订单支付结果
+FrontEnd --> 用户 --:显示订单支付结果
+@enduml

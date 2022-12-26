@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+title 删除配送地址
+
+actor 客户
+participant FrontEnd
+participant BackEnd
+database 数据库
+
+客户 -> FrontEnd ++: 删除配送地址
+FrontEnd --> 客户 : 确认删除配送地址
+客户 -> FrontEnd :点击确认
+FrontEnd -> BackEnd ++: 请求删除客户配送地址
+BackEnd -> 数据库 ++: 将配送地址信息从数据库中删除
+数据库 --> BackEnd --: 返回数据库操作结果
+BackEnd --> FrontEnd --: 返回操作结果
+FrontEnd --> 客户 --:显示删除地址结果
+@enduml

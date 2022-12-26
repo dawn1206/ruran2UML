@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+title 用户查看历史订单
+
+actor 用户
+participant FrontEnd
+participant BackEnd
+database 数据库
+
+用户 -> FrontEnd ++:用户查看历史订单
+FrontEnd -> BackEnd ++: 请求历史订单
+BackEnd -> 数据库 ++:查询用户历史订单信息
+数据库 --> BackEnd --: 返回历史订单信息
+BackEnd --> FrontEnd --:返回历史订单信息
+FrontEnd --> 用户 --:显示历史订单
+
+@enduml

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28f96acd-7fdb-4b5e-92a2-2c586c8ad51c" name="Changes" comment="clear">
-      <change afterPath="$PROJECT_DIR$/src/宏观用例图.puml" afterDir="false" />
+    <list default="true" id="28f96acd-7fdb-4b5e-92a2-2c586c8ad51c" name="Changes" comment="修改">
+      <change afterPath="$PROJECT_DIR$/src/bushu.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/店铺申请.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/订单分配.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/骑手功能性需求分析.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/骑手功能性需求分析.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/骑手查单取餐送达A.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/骑手查单取餐送达A.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/骑手类图.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/骑手类图.puml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,11 +16,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="UML Object" />
-        <option value="UML Activity" />
         <option value="UML State" />
         <option value="UML Class" />
         <option value="UML Sequence" />
         <option value="UML Use Case" />
+        <option value="UML Deployment" />
+        <option value="UML Activity" />
       </list>
     </option>
   </component>
@@ -44,11 +44,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "DefaultPlantUmlFileTemplate": "UML Use Case",
+    "DefaultPlantUmlFileTemplate": "UML Activity",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "C:/Users/admin/Desktop",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>

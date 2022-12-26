@@ -1,0 +1,80 @@
+@startuml
+'https://plantuml.com/deployment-diagram
+top to bottom direction
+
+actor 客户
+actor 商家用户
+actor 骑手用户
+actor 外卖平台管理员
+node 数据库服务器{
+database 数据库[
+用户数据表
+--
+店铺信息表
+--
+订单信息表
+--
+送货订单信息表
+--
+餐品信息表
+--
+购物车信息表
+--
+]
+}
+node 外卖平台系统后端服务器{
+
+component "<<artifact>>\n外卖平台" as 外卖平台
+component "<<artifact>>\n客户系统" as 客户系统
+component "<<artifact>>\n骑手用户系统" as 骑手用户系统
+component "<<artifact>>\n商家用户系统" as 商家用户系统
+component "<<artifact>>\n订单模块" as 订单模块
+component "<<artifact>>\n数据mapper" as 数据mapper
+component "<<artifact>>\nController" as Controller
+
+Controller .>外卖平台
+Controller .>客户系统
+Controller .>骑手用户系统
+Controller .>商家用户系统
+
+外卖平台 -(0- 商家用户系统 :"商铺申请"
+骑手用户系统 -(0- 外卖平台 :"送货订单分配"
+外卖平台 .left-> 订单模块
+客户系统 .down-> 订单模块
+骑手用户系统 .left.> 订单模块
+商家用户系统 .-> 订单模块
+
+外卖平台 .right.> 数据mapper
+客户系统 .down.> 数据mapper
+骑手用户系统 .right.> 数据mapper
+商家用户系统 .right.> 数据mapper
+数据mapper ..> 数据库:使用PO映射
+
+'Controller..>外卖平台
+}
+
+node 外卖平台系统web前端服务器 {
+component 界面[
+<<artifact>>
+--
+平台管理员web系统
+--
+客户界面web系统
+--
+骑手用户界面web系统
+--
+商家用户界面web系统
+]
+}
+界面 ...>Controller
+node 浏览器客户端
+
+外卖平台系统web前端服务器 -left- 外卖平台系统后端服务器:"<<protocol>>\n tcp/ip"
+浏览器客户端 -down- 外卖平台系统web前端服务器:"<<protocol>>\n tcp/ip"
+ 客户 -- 浏览器客户端
+ 商家用户 -- 浏览器客户端
+ 骑手用户 -- 浏览器客户端
+ 外卖平台管理员 -- 浏览器客户端
+外卖平台系统后端服务器 -up- 数据库服务器:"<<protocol>>\n tcp/ip"
+
+@enduml

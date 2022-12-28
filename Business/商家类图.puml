@@ -1,0 +1,102 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+rectangle 商家子系统{
+
+    rectangle FrontEnd{
+    }
+
+    rectangle BackEnd{
+
+        rectangle Controller层 {
+            class 商家Controller{
+            +注册()
+            +登录()
+            }
+
+            class 店铺Controller{
+            +申请新店铺()
+            +选择店铺()
+            +查看店铺信息()
+            +修改店铺信息()
+            +查看店铺总营业额()
+            +查看店铺历史营业额()
+            +查看店铺当月营业额()
+            }
+
+            class 食品Controller{
+            +修改食品信息()
+            +新增食品()
+            +删除食品()
+            +查看食品销售额列表()
+            }
+
+            class 订单Controller{
+            +显示用户订单()
+            +处理用户订单()
+            +发布派送订单()
+            }
+        }
+
+        rectangle Service层{
+            interface 商家Service{
+            +注册()
+            +登录()
+            }
+
+            interface 店铺Service{
+            +申请新店铺()
+            +选择店铺()
+            +查看店铺信息()
+            +修改店铺信息()
+            +查看店铺总营业额()
+            +查看店铺历史营业额()
+            +查看店铺当月营业额()
+            }
+
+            interface 食品Service{
+            +修改食品信息()
+            +新增食品()
+            +删除食品()
+            +查看食品销售额列表()
+            }
+
+            interface 订单Service{
+            +显示用户订单()
+            +处理用户订单()
+            +发布派送订单()
+            }
+        }
+
+        rectangle Dao层 {
+            interface 商家mapper{
+            }
+
+            interface 店铺mapper{
+            }
+
+            interface 订单mapper{
+            }
+
+            interface 食品mapper{
+            }
+        }
+    }
+
+    FrontEnd -->商家Controller:通过http使用restfulAPI方式调用
+    FrontEnd -->店铺Controller
+    FrontEnd -->食品Controller
+    FrontEnd -->订单Controller
+
+    商家Controller o--> 商家Service
+    店铺Controller o--> 店铺Service
+    食品Controller o--> 食品Service
+    订单Controller o--> 订单Service
+
+    商家Service o--> 商家mapper
+    店铺Service o--> 店铺mapper
+    食品Service o--> 食品mapper
+    订单Service o--> 订单mapper
+
+}
+@enduml

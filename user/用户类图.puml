@@ -1,0 +1,77 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+rectangle 客户子系统{
+
+    rectangle FrontEnd{
+    }
+
+    rectangle BackEnd{
+
+        rectangle Controller层 {
+            class 客户Controller{
+            +注册()
+            +登录()
+            +线上点餐()
+            }
+
+            class 地址Controller{
+            +新增地址()
+            +删除地址()
+            +编辑地址()
+            }
+
+            class 订单Controller{
+            +查看历史订单()
+            +支付订单()
+            +生成订单()
+            }
+        }
+
+        rectangle Service层{
+            interface 客户Service{
+            +注册()
+            +登录()
+            +线上点餐()
+            }
+
+            interface 地址Service{
+            +新增地址()
+            +删除地址()
+            +编辑地址()
+            }
+
+            interface 订单Service{
+            +查看历史订单()
+            +支付订单()
+            +生成订单()
+            }
+        }
+
+        rectangle Dao层 {
+            interface 客户mapper{
+            }
+
+            interface 地址mapper{
+            }
+
+            interface 订单mapper{
+            }
+
+        }
+    }
+
+    FrontEnd -->客户Controller
+    FrontEnd -->地址Controller
+    FrontEnd -->订单Controller:通过http使用restfulAPI方式调用
+
+    客户Controller o--> 客户Service
+    地址Controller o--> 地址Service
+    订单Controller o--> 订单Service
+
+    客户Service o--> 客户mapper
+    地址Service o--> 地址mapper
+    订单Service o--> 订单mapper
+
+}
+@enduml

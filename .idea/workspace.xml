@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28f96acd-7fdb-4b5e-92a2-2c586c8ad51c" name="Changes" comment="修改">
-      <change afterPath="$PROJECT_DIR$/src/bushu.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/店铺申请.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/订单分配.puml" afterDir="false" />
+    <list default="true" id="28f96acd-7fdb-4b5e-92a2-2c586c8ad51c" name="Changes" comment="泳道">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,9 +16,9 @@
         <option value="UML State" />
         <option value="UML Class" />
         <option value="UML Sequence" />
-        <option value="UML Use Case" />
         <option value="UML Deployment" />
         <option value="UML Activity" />
+        <option value="UML Use Case" />
       </list>
     </option>
   </component>
@@ -44,7 +41,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "DefaultPlantUmlFileTemplate": "UML Activity",
+    "DefaultPlantUmlFileTemplate": "UML Use Case",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -78,6 +75,7 @@
       <workItem from="1671602559613" duration="10850000" />
       <workItem from="1671671827197" duration="300000" />
       <workItem from="1671954556636" duration="3592000" />
+      <workItem from="1672223476945" duration="3211000" />
     </task>
     <task id="LOCAL-00001" summary="clear">
       <created>1671849198656</created>
@@ -93,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671849321609</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="泳道">
+      <created>1672021848274</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672021848274</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +117,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="clear" />
-    <option name="LAST_COMMIT_MESSAGE" value="clear" />
+    <MESSAGE value="泳道" />
+    <option name="LAST_COMMIT_MESSAGE" value="泳道" />
   </component>
 </project>
